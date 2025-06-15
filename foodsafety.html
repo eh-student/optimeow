@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feline Food Safety Guide | Optimeow</title>
+    <meta name="description" content="Know what's safe and what's dangerous for your feline companion. Keep your curious cat healthy with proper nutrition.">
+    <meta name="keywords" content="cat food safety, toxic foods for cats, safe cat foods, feline nutrition">
+    <meta name="author" content="Optimeow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a0a8c8a2c9.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50">
+      <!-- Header/Navigation -->
+      <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">                <div class="flex items-center space-x-2">
+                    <i class="fas fa-paw text-gray-700 text-2xl"></i>
+                    <a href="index.html" class="text-xl font-semibold text-gray-800">Optimeow</a>
+                </div>                <nav class="hidden md:flex space-x-8">
+                    <a href="products.html" class="nav-link text-gray-700 font-medium hover:text-gray-900">Our Cat Foods</a>
+                    <a href="recipes.html" class="nav-link text-gray-700 font-medium hover:text-gray-900">Recipes</a>
+                    <a href="nutrition.html" class="nav-link text-gray-700 font-medium hover:text-gray-900">Nutrition Guides</a>
+                    <a href="foodsafety.html" class="nav-link text-gray-700 font-medium hover:text-gray-900">Food Safety</a>
+                </nav>                <button class="md:hidden text-gray-700" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden mt-4 pb-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="products.html" class="text-gray-700 font-medium hover:text-gray-900 py-2">Our Cat Foods</a>
+                    <a href="recipes.html" class="text-gray-700 font-medium hover:text-gray-900 py-2">Recipes</a>
+                    <a href="nutrition.html" class="text-gray-700 font-medium hover:text-gray-900 py-2">Nutrition Guides</a>
+                    <a href="foodsafety.html" class="text-gray-700 font-medium hover:text-gray-900 py-2">Food Safety</a>
+                </div>
+            </div>
+        </div>
+    </header>    <!-- Hero Section -->
+    <div class="bg-gray-900 text-white">
+        <div class="container mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 relative">
+            <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
+            <div class="relative z-10">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-6">
+                    Feline Food Safety Guide
+                </h1>
+                <p class="max-w-3xl text-xl text-gray-300">
+                    Know what's safe and what's dangerous for your feline companion. Keep your curious cat healthy with proper nutrition.
+                </p>
+            </div>
+        </div>
+    </div>    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Category Tabs -->
+        <div class="border-b border-gray-200 mb-8">
+            <div class="flex space-x-8" id="category-tabs">
+                <button class="category-tab active py-4 px-1 font-medium text-sm border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" data-category="all">
+                    All Foods
+                </button>
+                <button class="category-tab py-4 px-1 font-medium text-sm border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" data-category="safe">
+                    Safe Foods
+                </button>
+                <button class="category-tab py-4 px-1 font-medium text-sm border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" data-category="unsafe">
+                    Unsafe Foods
+                </button>
+                <button class="category-tab py-4 px-1 font-medium text-sm border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" data-category="caution">
+                    Use Caution
+                </button>
+            </div>
+        </div>
+
+        <!-- Food Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="food-container">
+            <!-- Safe Foods -->
+            <div class="food-card safe rounded-lg border-2 bg-white shadow-sm p-6 transition-all hover:shadow-md" data-category="safe">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900">Cooked Chicken</h3>
+                        <div class="mt-1 flex items-center">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
+                                <i class="fas fa-check-circle mr-1"></i> Safe
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tooltip-container relative">
+                        <i class="fas fa-info-circle text-gray-400 hover:text-gray-600 cursor-pointer"></i>
+                        <div class="tooltip">
+                            Plain cooked chicken is an excellent source of protein for cats. Always remove bones and skin.
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-3 text-sm text-gray-600">
+                    Lean, boneless, skinless chicken is a healthy protein source when cooked plain (no seasoning or oils).
+                </p>
+            </div>
+
+            <div class="food-card safe rounded-lg border-2 bg-white shadow-sm p-6 transition-all hover:shadow-md" data-category="safe">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900">Salmon</h3>
+                        <div class="mt-1 flex items-center">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
+                                <i class="fas fa-check-circle mr-1"></i> Safe
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tooltip-container relative">
+                        <i class="fas fa-info-circle text-gray-400 hover:text-gray-600 cursor-pointer"></i>
+                        <div class="tooltip">
+                            Cook thoroughly and serve in moderation as too much can lead to vitamin deficiencies.
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-3 text-sm text-gray-600">
+                    Cooked salmon (without bones or seasoning) provides omega-3 fatty acids. Limit to occasional treats.
+                </p>
+            </div>
+
+            <div class="food-card safe rounded-lg border-2 bg-white shadow-sm p-6 transition-all hover:shadow-md" data-category="safe">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900">Pumpkin</h3>
+                        <div class="mt-1 flex items-center">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
+                                <i class="fas fa-check-circle mr-1"></i> Safe
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tooltip-container relative">
+                        <i class="fas fa-info-circle text-gray-400 hover:text-gray-600 cursor-pointer"></i>
+                        <div class="tooltip">
+                            Always use plain cooked pumpkin, not pie filling which contains spices and sugar.
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-3 text-sm text-gray-600">
+                    Plain cooked pumpkin (not pie filling) can help with digestion. Use in small amounts.
+                </p>
+            </div>
+
+            <!-- Unsafe Foods -->
+            <div class="food-card unsafe rounded-lg border-2 bg-white shadow-sm p-6 transition-all hover:shadow-md" data-category="unsafe">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900">Onions & Garlic</h3>
+                        <div class="mt-1 flex items-center">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800">
+                                <i class="fas fa-times-circle mr-1"></i> Toxic
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tooltip-container relative">
+                        <i class="fas fa-info-circle text-gray-400 hover:text-gray-600 cursor-pointer"></i>
+                        <div class="tooltip">
+                            All forms are dangerous - raw, cooked, powdered, or as ingredients in other foods.
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-3 text-sm text-gray-600">
+                    These allium family foods can damage red blood cells, leading to anemia in cats. All forms are toxic.
+                </p>
+            </div>
+
+            <div class="food-card unsafe rounded-lg border-2 bg-white shadow-sm p-6 transition-all hover:shadow-md" data-category="unsafe">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900">Chocolate</h3>
+                        <div class="mt-1 flex items-center">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800">
+                                <i class="fas fa-times-circle mr-1"></i> Toxic
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tooltip-container relative">
+                        <i class="fas fa-info-circle text-gray-400 hover:text-gray-600 cursor-pointer"></i>
+                        <div class="tooltip">
+                            Darker chocolates are more dangerous due to higher theobromine content.
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-3 text-sm text-gray-600">
+                    Contains theobromine which cats cannot metabolize. Can cause heart problems and seizures.
+                </p>
+            </div>
+
+            <div class="food-card unsafe rounded-lg border-2 bg-white shadow-sm p-6 transition-all hover:shadow-md" data-category="unsafe">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900">Grapes & Raisins</h3>
+                        <div class="mt-1 flex items-center">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800">
+                                <i class="fas fa-times-circle mr-1"></i> Toxic
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tooltip-container relative">
+                        <i class="fas fa-info-circle text-gray-400 hover:text-gray-600 cursor-pointer"></i>
+                        <div class="tooltip">
+                            Can cause sudden kidney failure even in small amounts.
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-3 text-sm text-gray-600">
+                    Even small amounts can cause acute kidney failure in cats. Mechanism is still unknown.
+                </p>
+            </div>
+
+            <!-- Use Caution Foods -->
+            <div class="food-card caution rounded-lg border-2 bg-white shadow-sm p-6 transition-all hover:shadow-md" data-category="caution">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900">Dairy Products</h3>
+                        <div class="mt-1 flex items-center">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800">
+                                <i class="fas fa-exclamation-circle mr-1"></i> Caution
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tooltip-container relative">
+                        <i class="fas fa-info-circle text-gray-400 hover:text-gray-600 cursor-pointer"></i>
+                        <div class="tooltip">
+                            Most adult cats are lactose intolerant. Fermented dairy like yogurt might be better tolerated.
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-3 text-sm text-gray-600">
+                    Many adult cats are lactose intolerant. Small amounts of plain yogurt or cheese may be okay.
+                </p>
+            </div>
+
+            <div class="food-card caution rounded-lg border-2 bg-white shadow-sm p-6 transition-all hover:shadow-md" data-category="caution">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900">Tuna</h3>
+                        <div class="mt-1 flex items-center">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800">
+                                <i class="fas fa-exclamation-circle mr-1"></i> Caution
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tooltip-container relative">
+                        <i class="fas fa-info-circle text-gray-400 hover:text-gray-600 cursor-pointer"></i>
+                        <div class="tooltip">
+                            Human-grade tuna often contains mercury and lacks proper nutrients cats need long-term.
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-3 text-sm text-gray-600">
+                    Occasionally okay, but too much can lead to mercury poisoning and nutritional imbalances.
+                </p>
+            </div>
+
+            <div class="food-card caution rounded-lg border-2 bg-white shadow-sm p-6 transition-all hover:shadow-md" data-category="caution">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900">Liver</h3>
+                        <div class="mt-1 flex items-center">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800">
+                                <i class="fas fa-exclamation-circle mr-1"></i> Caution
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tooltip-container relative">
+                        <i class="fas fa-info-circle text-gray-400 hover:text-gray-600 cursor-pointer"></i>
+                        <div class="tooltip">
+                            Can cause vitamin A toxicity if fed too frequently.
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-3 text-sm text-gray-600">
+                    Rich in nutrients but can cause vitamin A toxicity if fed too often. Small portions occasionally.
+                </p>
+            </div>
+        </div>
+
+        <!-- Emergency Section -->
+        <div class="mt-16 bg-red-50 border border-red-200 rounded-lg p-6">
+            <div class="flex">
+                <div class="flex-shrink-0">
+                    <i class="fas fa-exclamation-triangle text-red-600 text-2xl"></i>
+                </div>
+                <div class="ml-3">
+                    <h3 class="text-lg font-medium text-red-800">Emergency Information</h3>
+                    <div class="mt-2 text-sm text-red-700">
+                        <p>If you suspect your cat has ingested something toxic, contact your veterinarian or an emergency pet clinic immediately.</p>
+                        <p class="mt-2">You can also call the <span class="font-semibold">Pet Poison Helpline</span> at <a href="tel:+18557966866" class="underline">(855) 764-7661</a> (US) or the <span class="font-semibold">ASPCA Animal Poison Control</span> at <a href="tel:+18884264435" class="underline">(888) 426-4435</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-paw text-gray-400 text-2xl"></i>
+                        <span class="text-xl font-semibold text-white">Optimeow</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Providing science-backed nutrition information for feline health since 2018.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Veterinary Partners</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Research Library</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Feeding Calculators</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Disclaimer</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-sm"></i>
+                            <a href="mailto:info@optimeow.com" class="text-gray-400 hover:text-white">info@optimeow.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-sm"></i>
+                            <a href="tel:+18005551234" class="text-gray-400 hover:text-white">1-800-555-1234</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2023 Optimeow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Tab functionality
+            const tabs = document.querySelectorAll('.category-tab');
+            const foodCards = document.querySelectorAll('.food-card');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Update active tab styling
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter food cards
+                    const category = this.dataset.category;
+                    
+                    foodCards.forEach(card => {
+                        if (category === 'all' || card.dataset.category === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Initialize tooltips
+            const tooltipContainers = document.querySelectorAll('.tooltip-container');
+            tooltipContainers.forEach(container => {
+                const tooltip = container.querySelector('.tooltip');
+                
+                container.addEventListener('mouseenter', function() {
+                    tooltip.style.visibility = 'visible';
+                    tooltip.style.opacity = '1';
+                });
+                
+                container.addEventListener('mouseleave', function() {
+                    tooltip.style.visibility = 'hidden';
+                    tooltip.style.opacity = '0';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
